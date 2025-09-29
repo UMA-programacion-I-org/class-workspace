@@ -1,0 +1,27 @@
+ENTRADA:
+
+- numbers: lista ordenada de numeros enteros
+- target: numero entero a buscar en la lista
+
+SALIDA:
+
+- index: indice del numero objetivo en la lista, o -1 si no se encuentra
+
+ALGORITMO:
+
+low = 0
+high = len(numbers) - 1
+index = -1
+
+while low <= high:
+    mid = (low + high) // 2
+
+    if numbers[mid] == target:
+        index = mid
+        break
+    elif numbers[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+
+retornar index
