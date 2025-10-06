@@ -1,0 +1,23 @@
+ENTRADA:
+
+- items: lista de numeros enteros a modificar
+
+SALIDA:
+
+- items: lista modificada
+
+ALGORITMO:
+
+i = 1
+while i < len(items):
+    v = items[i]
+    j = i - 1
+
+    while j >= 0 and items[j] > v:
+        items[j + 1] = items[j]
+        j = j - 1
+
+    items[j + 1] = v
+    i = i + 1
+
+retornar items
