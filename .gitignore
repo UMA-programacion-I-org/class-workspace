@@ -24,3 +24,5 @@ dist/
 *.swp
 *.sublime-workspace
 *.sublime-project
+
+prompts/
